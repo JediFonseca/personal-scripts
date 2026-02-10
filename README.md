@@ -24,7 +24,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 ```
 
-**3. Salve e saia:**
+**3. Salve e saia:**  
 Pressione Ctrl + O para salvar, Enter para confirmar e Ctrl + X para sair.
 
 **4. Atualize o terminal atual:**
