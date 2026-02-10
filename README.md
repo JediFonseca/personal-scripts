@@ -5,7 +5,9 @@
 1. Colar os scripts em "~/.local/bin/".
 2. Se for a primeira vez que scripts estão sendo utilizados nessa pasta, reiniciar o sistema pode ser necessário.
 
-### Se mesmo após ter reiniciado o sistema os scripts não estiverem funcionando, siga os passos abaixo:
+### Atualizar a variável de ambiente $PATH:
+
+Se mesmo após ter reiniciado o sistema os scripts não estiverem funcionando, siga os passos abaixo:
 
 **1. Abra o arquivo .bashrc:**
 
