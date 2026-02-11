@@ -3,6 +3,12 @@
 # Código para adicionar valores à variáveis de forma interativa durante a execução do script.
 # Se o usuário não informar nenhum valor, o script utilizará as variáveis padrão pré estabelecidas.
 
+# Definição de cores.
+BLUE='\033[0;36m'  # Ciano.
+YELLOW='\033[1;33m'   # Amarelo.
+RED='\033[0;31m' # Vermelho.
+NOCOLOR='\033[0m' # Reseta a cor para o padrão do terminal.
+
 #################################################
 ### ENTRADA DE DADOS E DEFINIÇÃO DE VARIÁVEIS ###
 #################################################
