@@ -13,29 +13,29 @@ REMOTE_PADRAO="gdrive"
 ID_PADRAO="1WaU8_MxTIr3Y9O3ie43NzbfTXi6fKWLo"
 
 # Entrada de dados interativa.
-echo "--- Entrada de Dados (Campos Obrigatórios) ---"
-read -p "Caminho da pasta local: " LOCAL
-read -p "Nome do remoto no rclone: " REMOTE
-read -p "ID da pasta no GDrive: " ID
+echo "${RED}--- Entrada de Dados (Campos Obrigatórios) ---${NOCOLOR}"
+read -p "${YELLOW}Caminho da pasta local: ${NOCOLOR}" LOCAL
+read -p "${YELLOW}Nome do remoto no rclone: ${NOCOLOR}" REMOTE
+read -p "${YELLOW}ID da pasta no GDrive: ${NOCOLOR}" ID
 
 # Checa se as variáveis utilizadas serão as padrões ou as personalizadas e as informa ao usuário.
 if [ -z "$LOCAL" ]; then
     LOCAL=$LOCAL_PADRAO
-    echo "O remoto escolhido foi o padrão: $LOCAL"
+    echo "${YELLOW}O remoto escolhido foi o padrão: $LOCAL${NOCOLOR}"
 else
-    echo "O remoto \"$LOCAL\" foi selecionado."
+    echo "${YELLOW}O remoto \"$LOCAL\" foi selecionado.${NOCOLOR}"
 fi
 
 if [ -z "$REMOTE" ]; then
     REMOTE=$REMOTE_PADRAO
-    echo "O remoto escolhido foi o padrão: $REMOTE"
+    echo "${YELLOW}O remoto escolhido foi o padrão: $REMOTE${NOCOLOR}"
 else
-    echo "O remoto \"$REMOTE\" foi selecionado."
+    echo "${YELLOW}O remoto \"$REMOTE\" foi selecionado.${NOCOLOR}"
 fi
 
 if [ -z "$ID" ]; then
     ID=$ID_PADRAO
-    echo "O remoto escolhido foi o padrão: $ID"
+    echo "${YELLOW}O remoto escolhido foi o padrão: $ID${NOCOLOR}"
 else
-    echo "O remoto \"$ID\" foi selecionado."
+    echo "${YELLOW}O remoto \"$ID\" foi selecionado.${NOCOLOR}"
 fi
