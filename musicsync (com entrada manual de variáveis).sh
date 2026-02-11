@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Definição de cores.
 BLUE='\033[0;36m'  # Ciano.
 YELLOW='\033[1;33m'   # Amarelo.
 RED='\033[0;31m' # Vermelho.
