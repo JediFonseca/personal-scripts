@@ -1,0 +1,36 @@
+#!/bin/bash
+
+GREEN='\033[0;32m' # Verde
+BLUE='\033[0;36m'  # Ciano.
+NOCOLOR='\033[0m' # Reseta a cor para o padrão do terminal.
+
+sudo -v
+
+echo ""
+echo -e "${BLUE}Atualizando os repositórios do sistema...${NOCOLOR}"
+echo ""
+sudo apt update
+
+echo ""
+echo -e "${BLUE}Atualizando o sistema...${NOCOLOR}"
+echo ""
+sudo apt full-upgrade -y
+
+echo ""
+echo -e "${BLUE}Removendo pacotes e dependências não utilizadas...${NOCOLOR}"
+echo ""
+sudo apt autoremove -y
+
+echo ""
+echo -e "${BLUE}Atualizando os aplicativos em flatpak...${NOCOLOR}"
+echo ""
+flatpak upgrade -y
+
+echo ""
+echo -e "${BLUE}Removendo pacotes e dependências não utilizadas do flatpak...${NOCOLOR}"
+echo ""
+flatpak uninstall --unused -y
+
+echo ""
+echo -e "${GREEN}Script finalizado!${NOCOLOR}"
+echo ""
