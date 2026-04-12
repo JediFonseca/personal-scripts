@@ -55,9 +55,9 @@ else
   exit 1
 fi
 
-#---------------------------------------------------------------------------------
-# ---STAGE 2: COPY FILES TO INSTALLATION FOLDER AND GIVING EXECUTION PERMISSION---
-#---------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------
+# ---STAGE 2: COPYING FILES TO INSTALLATION FOLDER AND GIVING EXECUTION PERMISSION---
+#------------------------------------------------------------------------------------
 
 echo -e "${blue}\nCreating installation folder in \"~/.local/bin/Remote_Mouse\"...\n${nocolor}"
 mkdir -p "$HOME/.local/bin/Remote_Mouse/"
