@@ -8,17 +8,13 @@ RED='\033[0;31m' # Vermelho.
 NOCOLOR='\033[0m' # Reseta a cor para o padrão do terminal.
 
 # Checa se o rsync está instalado.
-
-RSYNC_PATH=$(command -v rsync)
-
-if [ -z "$RSYNC_PATH" ]; then
-    echo -e "${RED}Erro: o rsync não está instalado.${NOCOLOR}"
-    exit 1
-fi
+command -v rsync >/dev/null || exit 1
 
 #################################################
 ### ENTRADA DE DADOS E DEFINIÇÃO DE VARIÁVEIS ###
 #################################################
+
+clear
 
 # Entrada de dados interativa.
 # O loop vai rodar enquanto qualquer uma das variáveis estiver vazia.
