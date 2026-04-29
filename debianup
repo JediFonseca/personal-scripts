@@ -5,10 +5,12 @@ BLUE='\033[0;36m'  # Ciano.
 NOCOLOR='\033[0m' # Reseta a cor para o padrão do terminal.
 
 sudo -v
+while true; do sudo -v; sleep 60; done &
+sudo_pid=$!
+trap "kill $sudo_pid" EXIT
 
-echo ""
 echo -e "${BLUE}Atualizando os repositórios do sistema...${NOCOLOR}"
-echo ""
+echo
 sudo apt update
 
 echo ""
@@ -17,9 +19,10 @@ echo ""
 sudo apt full-upgrade -y
 
 echo ""
-echo -e "${BLUE}Removendo pacotes e dependências não utilizadas...${NOCOLOR}"
+echo -e "${BLUE}Limpando o lixo...${NOCOLOR}"
 echo ""
 sudo apt autoremove -y
+sudo apt autoclean -y
 
 echo ""
 echo -e "${BLUE}Atualizando os aplicativos em flatpak...${NOCOLOR}"
@@ -30,6 +33,11 @@ echo ""
 echo -e "${BLUE}Removendo pacotes e dependências não utilizadas do flatpak...${NOCOLOR}"
 echo ""
 flatpak uninstall --unused -y
+
+echo ""
+echo -e "${BLUE}Atualizando os aplicativos em Snap...${NOCOLOR}"
+echo ""
+sudo snap refresh
 
 echo ""
 echo -e "${GREEN}Script finalizado!${NOCOLOR}"
