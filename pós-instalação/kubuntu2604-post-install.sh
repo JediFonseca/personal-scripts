@@ -57,6 +57,7 @@ declare -A apt_packages=(
     ["perl"]="perl"
 	["git"]="Git"
 	["sshfs"]="sshfs"
+	["members"]="members"
 )
 
 declare -A flatpak_packages=(
