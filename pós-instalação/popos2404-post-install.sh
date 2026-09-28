@@ -63,6 +63,7 @@ declare -A apt_packages=(
     ["linux-tools-generic"]="linux-tools-generic"
     ["linux-cloud-tools-generic"]="linux-cloud-tools-generic"
 	["sshfs"]="sshfs"
+	["members"]="members"
 )
 
 declare -A flatpak_packages=(
