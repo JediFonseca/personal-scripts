@@ -36,7 +36,6 @@ $apps = @{
     "MoritzBunkus.MKVToolNix" = "MKVToolNix"
     "KDE.Kdenlive" = "Kdenlive"
     "Tailscale.Tailscale" = "Tailscale"
-	"Iterate.Cyberduck" = "Cyberduck"
 
     # Dependências para outros apps e mídias
     "Gyan.FFmpeg" = "FFmpeg"
