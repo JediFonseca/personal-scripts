@@ -179,6 +179,8 @@ function final_message {
 	Start-Process "https://www.amd.com/pt/support/downloads/drivers.html/graphics/radeon-600-500-400/radeon-rx-500-series/radeon-rx-580.html"
 	Start-Sleep -Seconds 1
 	Start-Process "https://www.amd.com/pt/support/downloads/drivers.html/chipsets/am4/b450.html"
+	Start-Sleep -Seconds 1
+	Start-Process "https://www-oo--software-com.translate.goog/en/download/current/ooshutup10?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt"
 	Write-Host "Você chegou ao final do script." -ForegroundColor Green
 }
 
