@@ -177,9 +177,9 @@ function final_message {
 	Write-Host "ou CTRL+C para não abrir a página e encerrar a execução do script agora." -ForegroundColor Yellow
 	Read-Host
 	
-	Start-Process "msedge.exe" "https://www.amd.com/pt/support/downloads/drivers.html/graphics/radeon-600-500-400/radeon-rx-500-series/radeon-rx-580.html"
+	Start-Process "https://www.amd.com/pt/support/downloads/drivers.html/graphics/radeon-600-500-400/radeon-rx-500-series/radeon-rx-580.html"
 	Start-Sleep -Seconds 1
-	Start-Process "msedge.exe" "https://www.amd.com/pt/support/downloads/drivers.html/chipsets/am4/b450.html"
+	Start-Process "https://www.amd.com/pt/support/downloads/drivers.html/chipsets/am4/b450.html"
 	Write-Host "Você chegou ao final do script." -ForegroundColor Green
 }
 
