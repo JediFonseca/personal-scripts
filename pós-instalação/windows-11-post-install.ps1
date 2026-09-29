@@ -1,4 +1,4 @@
-﻿# Script de instalação de aplicativos via winget
+# Script de instalação de aplicativos via winget
 # Requer Windows 10 com App Installer (winget) já configurado.
 
 # Comando para habilitar a execução de scripts:
@@ -51,6 +51,7 @@ $vcredists = @(
     "Microsoft.VCRedist.2005.x86",
     "Microsoft.VCRedist.2005.x64",
     "Microsoft.VCRedist.2008.x86",
+    "Microsoft.VCRedist.2008.x64",
     "Microsoft.VCRedist.2010.x86",
     "Microsoft.VCRedist.2010.x64",
     "Microsoft.VCRedist.2012.x86",
@@ -113,7 +114,7 @@ function install_apps {
 	Write-Host "Instalando os apps com o winget..." -ForegroundColor Yellow
 
 	foreach ($ident in $apps.Keys) {
-		winget install --id $ident -e --accept-package-agreements --accept-source-agreements --silent
+		winget install --id $ident -e --accept-package-agreements --accept-source-agreements --silent --source winget
 }
 }
 
@@ -123,7 +124,7 @@ function vcr_install {
 	Write-Host 'Instalando os "Microsoft VCRedists" de 2005 à 2015+...' -ForegroundColor Yellow
 
 	foreach ($ident2 in $vcredists) {
-		winget install --id $ident2 --accept-package-agreements --accept-source-agreements --silent
+		winget install --id $ident2 --accept-package-agreements --accept-source-agreements --silent --source winget
 }	
 }
 
@@ -177,10 +178,10 @@ function final_message {
 	Read-Host
 	
 	Start-Process "https://www.amd.com/pt/support/downloads/drivers.html/graphics/radeon-600-500-400/radeon-rx-500-series/radeon-rx-580.html"
-	Start-Sleep -Seconds 1
+	Start-Sleep -Seconds 10
 	Start-Process "https://www.amd.com/pt/support/downloads/drivers.html/chipsets/am4/b450.html"
 	Start-Sleep -Seconds 1
-	Start-Process "https://www-oo--software-com.translate.goog/en/download/current/ooshutup10?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt"
+	Start-Process "https://www.oo-software.com/en/download/current/ooshutup10"
 	Write-Host "Você chegou ao final do script." -ForegroundColor Green
 }
 
