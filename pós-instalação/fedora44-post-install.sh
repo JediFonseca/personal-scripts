@@ -55,7 +55,6 @@ declare -A dnf_packages=(
     ["make"]="make"
     ["perl"]="perl"
     ["adw-gtk3-theme"]="Libadwaita Theme for Legacy Apps"
-	["gnome-themes-extra"]="Adwaita Dark Theme for Legacy Apps"
     ["git"]="Git"
     ["curl"]="curl"
     ["wget"]="Wget"
@@ -90,6 +89,7 @@ declare -A rpm_downloads=(
     ["https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.22.1/Heroic-2.22.1-linux-x86_64.rpm"]="Heroic Games Launcher"
     ["https://download.virtualbox.org/virtualbox/7.2.16/VirtualBox-7.2-7.2.16_174877_fedora40-1.x86_64.rpm"]="VirtualBox"
     ["https://data.nephobox.com/issue/terabox/Linux/1.47.0/TeraBox-1.47.0.x86_64.rpm"]="Terabox"
+	["https://github.com/clementine-player/Clementine/releases/download/1.4.1-252-gca58aae07/clementine-1.4.1-2.252.gca58aae07.fc44.x86_64.rpm"]="Clementine"
 )
 
 declare -A appimage_downloads=(
