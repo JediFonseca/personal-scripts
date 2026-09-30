@@ -92,6 +92,7 @@ declare -A deb_downloads=(
     ["https://download.virtualbox.org/virtualbox/7.2.20/virtualbox-7.2_7.2.20-175154~Ubuntu~noble_amd64.deb"]="VirtualBox"
     ["https://cdn.fastly.steamstatic.com/client/installer/steam.deb"]="Steam"
     ["https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.22.3/Heroic-2.22.3-linux-amd64.deb"]="Heroic Games Launcher"
+	["https://github.com/clementine-player/Clementine/releases/download/1.4.1-252-gca58aae07/clementine_1.4.1-252-gca58aae07.noble_amd64.deb"]="Clementine"
 )
 
 declare -A appimage_downloads=(
