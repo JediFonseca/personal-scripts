@@ -60,7 +60,6 @@ declare -A dnf_packages=(
     ["curl"]="curl"
     ["wget"]="Wget"
 	["sshfs"]="sshfs"
-	["kitty"]="Kitty"
 )
 
 declare -A flatpak_packages=(
