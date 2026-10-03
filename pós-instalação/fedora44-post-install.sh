@@ -16,6 +16,7 @@ coloryellow='\033[1;33m'   # Amarelo - para avisos.
 colorred='\033[0;31m' # Erros
 nocolor='\033[0m' # Reseta a cor para o padrão do terminal.
 
+install_sak="wget -qO- "https://raw.githubusercontent.com/JediFonseca/swiss-army-knife/refs/heads/main/sak-install" | bash"
 install_tailscale="curl -fsSL https://tailscale.com/install.sh | sh"
 
 # --------------------------------------------------------------------------------------------------------
@@ -59,6 +60,7 @@ declare -A dnf_packages=(
     ["curl"]="curl"
     ["wget"]="Wget"
 	["sshfs"]="sshfs"
+	["kitty"]="Kitty"
 )
 
 declare -A flatpak_packages=(
@@ -96,7 +98,6 @@ declare -A appimage_downloads=(
     ["https://github.com/kem-a/AppManager/releases/download/v3.8.0/AppManager-3.8.0-anylinux-x86_64.AppImage"]="AppManager"
 	["https://github.com/jeffvli/feishin/releases/download/v1.17.0/Feishin-linux-x86_64.AppImage"]="Feishin"
 	["https://objects.joplinusercontent.com/v3.7.18/Joplin-3.7.18.AppImage?source=JoplinWebsite&type=New"]="Joplin"
-	["https://github.com/jely2002/youtube-dl-gui/releases/download/app-v3.2.1/Open.Video.Downloader_3.2.1_amd64.AppImage"]="Open Video Downloader"
 )
 
 declare -A remove_packages=(
@@ -347,6 +348,7 @@ if [[ $# -eq 0 ]]; then
     rpm_downloads_list
     rpm_installation
 	eval "$install_tailscale"
+	eval "$install_sak"
 	appimages_downloads_list
     remove_packages_list
     mylinks
@@ -369,6 +371,7 @@ else
             --flatpak-per)  flatpak_permissions ;;
             --mylinks)      mylinks ;;
 			--tailscale)	eval "$install_tailscale" ;;
+			--sak)			eval "$install_sak" ;;
             *)
                 echo -e "${colorred}Opção inválida: $arg${nocolor}"
                 exit 7
