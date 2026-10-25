@@ -1,0 +1,8 @@
+[Unit]
+Description=Automontagem de diretórios remotos com SSHFS
+
+[Service]
+ExecStart=%h/.local/bin/sftp_automount
+
+[Install]
+WantedBy=default.target
