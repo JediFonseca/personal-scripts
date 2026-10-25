@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Variáveis:
+
+userip="jedifonseca@100.80.135.72" 		          # Usuário e IP do dispositivo remoto.
+mymountpoint="$HOME/.mnt/NAS" 			          # Diretório no PC local onde o sistema de arquivos remoto será montado.
+mymountsource="/mnt/dados/" 				      # Diretório do dispositivo remoto que será montado no PC local.
+errorfilelocation="$HOME/sftp_did_not_mount"         	  # Localização do indicador de erro no PC local.
+
+# Execução:
+
+sleep 10 # Os "sleeps" servem para dar tempo do Tailscale iniciar, caso esteja sendo utilizado.
+
+fusermount -u "$mymountpoint" 2> /dev/null
+mkdir -p "$mymountpoint"
+
+sshfs $userip:$mymountsource $mymountpoint -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=120 -f
+if [[ $? != 0 ]]; then
+    sleep 20
+    sshfs $userip:$mymountsource $mymountpoint -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=120 -f || touch "$errorfilelocation"
+fi
