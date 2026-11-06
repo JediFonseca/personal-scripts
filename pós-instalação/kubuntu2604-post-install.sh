@@ -60,7 +60,6 @@ declare -A apt_packages=(
 	["git"]="Git"
 	["sshfs"]="sshfs"
 	["members"]="members"
-	["kitty"]="Kitty"
 )
 
 declare -A flatpak_packages=(
@@ -84,10 +83,11 @@ declare -A flatpak_packages=(
 
 declare -A deb_downloads=(
     ["https://data.nephobox.com/issue/terabox/Linux/1.49.5/TeraBox_1.49.5_amd64.deb"]="TeraBox"
-    ["https://download.virtualbox.org/virtualbox/7.2.20/virtualbox-7.2_7.2.20-175154~Ubuntu~resolute_amd64.deb"]="VirtualBox"
+    ["https://download.virtualbox.org/virtualbox/7.2.22/virtualbox-7.2_7.2.22-175245~Ubuntu~resolute_amd64.deb"]="VirtualBox"
     ["https://cdn.fastly.steamstatic.com/client/installer/steam.deb"]="Steam"
-    ["https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.22.3/Heroic-2.22.3-linux-amd64.deb"]="Heroic Games Launcher"
-	["https://github.com/clementine-player/Clementine/releases/download/1.4.1-252-gca58aae07/clementine_1.4.1-252-gca58aae07.resolute_amd64.deb"]="Clementine"
+    ["https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.22.4/Heroic-2.22.4-linux-amd64.deb"]="Heroic Games Launcher"
+	["https://github.com/clementine-player/Clementine/releases/download/1.4.4/clementine_1.4.4.resolute_amd64.deb"]="Clementine"
+	["https://github.com/PurpleDoubleD/locally-uncensored/releases/download/v3.0.10/Locally.Uncensored_3.0.10_amd64.deb"]="Locally Uncensored"
 )
 
 declare -A appimage_downloads=(
@@ -205,7 +205,7 @@ sudo apt update
 sudo apt install --reinstall -y "${!apt_packages[@]}"
 echo
 echo -e "${coloryellow}Instalando o \"Brave Origin\"...${nocolor}"
-curl -fsS https://dl.brave.com/install.sh | FLAVOR=origin CHANNEL=beta sh
+curl -fsS https://dl.brave.com/install.sh | FLAVOR=origin sh
 echo
 echo -e "${coloryellow}Executando a limpeza pós instalação...${nocolor}"
 echo
