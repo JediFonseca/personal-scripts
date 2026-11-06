@@ -79,6 +79,7 @@ declare -A flatpak_packages=(
 	["org.audacityteam.Audacity"]="Audacity"
 	["org.soundconverter.SoundConverter"]="Sound Converter"
 	["com.bitwarden.desktop"]="BitWarden"
+	["org.torproject.torbrowser"]="Tor Browser"
 )
 
 declare -A deb_downloads=(
