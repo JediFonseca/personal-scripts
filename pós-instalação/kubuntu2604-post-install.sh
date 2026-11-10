@@ -63,7 +63,7 @@ declare -A apt_packages=(
 )
 
 declare -A flatpak_packages=(
-    ["io.github.peazip.PeaZip"]="PeaZip"
+    ["com.ktechpit.colorsmith"]="Color Smith"
     ["net.davidotek.pupgui2"]="ProtonUp-Qt"
     ["com.protonvpn.www"]="Proton VPN"
     ["org.gimp.GIMP"]="GIMP"
